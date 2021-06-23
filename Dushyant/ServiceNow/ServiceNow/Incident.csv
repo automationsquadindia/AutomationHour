@@ -1,0 +1,40 @@
+﻿number,sys_id,description,short_description,priority,approval,state
+INC0000015,46e2fee9a9fe19810049b49dee0daf58,There was a software update two days ago and now my VPN doesn't work. Nothing loads when I click on the VPN client icon on my desktop.,I can't launch my VPN client since the last software update,1,not requested,2
+INC0000016,46e3e949a9fe19810069b824ba2c761a,Seeing puddles of water on the floor of the server room. We've put buckets out to collect the water until this is fixed.,Rain is leaking on main DNS Server,1,not requested,2
+INC0000017,46e482d9a9fe198101d3e3f3e2a14459,I need to organize my inbox in my email program. However I can't create a sub-folder. I didn't seen an option to create a new folder when right clicking.,How do I create a sub-folder,1,not requested,3
+INC0000018,46e57642a9fe1981000b96a5dca501ff,Were the permissions on the sales forecast spreadsheet changed recently? They were editable last week but are read only today. Can someone update the permissions to make the spreadsheet editable again? We need to update the spreadsheet ASAP.,Sales forecast spreadsheet is READ ONLY,1,not requested,2
+INC0000019,46e8219ba9fe1981013806b6e04fed06,I downloaded and installed 64-bit Windows 7 virtual machine and I can't get it to launch. I'm not sure if I need 64-bit or 32-bit.,Can't launch 64-bit Windows 7 virtual machine,2,not requested,2
+INC0000020,46edaa6aa9fe198101b9d14ced16619f,I lost my work-issued iPhone 7 while traveling last week and need a replacement device. I've erased the phone remotely and have called my carrier to shut off service to it.,"I need a replacement iPhone, please",5,not requested,2
+INC0000025,46f09e75a9fe198100f4ffd8d366d17b,I have a project involving video editing to complete. I've installed the editing software and the memory in my laptop is insufficient to run it effectively.,Need to add more memory to laptop,1,not requested,2
+INC0000027,46f4f4dfa9fe198100063e60278f76ec,The hotfix was installed on my PC and now some of my applications have stopped working. Can I roll back to the previous version?,Please remove the latest hotfix from my PC,2,not requested,2
+INC0000029,46f67787a9fe198101e06dfcf3a78e99,WeatherBug icon has disappeared from my desktop. Unable to get my weather report.,I can't get my weather report,5,not requested,2
+INC0000031,47064b68a9fe19810186793eefffc9b7,"Need to adjust layout of UI, add additional fields, and remove a few buttons. We are missing some critical fields that need to get added immediately.",Need help with Remedy. Can we configure UI?,1,not requested,2
+INC0000037,4715ab62a9fe1981018c3efb96143495,Need to place order for a new machine. Will need help with installation also.,Request for a new service,3,not requested,2
+INC0000039,471bfbc7a9fe198101e77a3e10e5d47f,Unable to access Oregon mail server. Is it down?,Trouble getting to Oregon mail server,5,not requested,1
+INC0000040,471d4732a9fe198100affbf655e59172,Seeing JavaScript error message on hiring page on Explorer and Firefox.,JavaScript error on hiring page of corporate website,3,not requested,3
+INC0000041,471eb058a9fe198100f89592e1ea93d3,Unable to dial out or receive calls. Phone is plugged in but there's no dial tone.,My desk phone does not work,3,not requested,2
+INC0000044,47204688a9fe1981011a20af100f381a,"Tried to connect to SAP and all I see is a ""Connecting…."" message but nothing else happens.",Can't log into SAP from my laptop today,2,not requested,2
+INC0010112,552c48888c033300964f4932b03eb092,,Assessment :  ATF Assessor,5,not requested,1
+INC0009009,57af7aec73d423002728660c4cf6a71c,Unable to access the shared folder. Please provide access.,Unable to access the shared folder.,4,not requested,1
+INC0000057,78271e1347c12200e0ef563dbb9a7109,Wifi connection seems slow. Webpages are taking a very long time to load.,Performance problems with wifi,5,not requested,1
+INC0000059,85071a1347c12200e0ef563dbb9a71c1,I can access my personal folder but can't access my team's folder on our file share.,Unable to access team file share,3,not requested,1
+INC0000007,8d6353eac0a8016400d8a125ca14fc1f,"I have to analyze all US data in the SFA system, but am unable to get to see the data from the west coast.",Need access to sales DB for the West,1,,3
+INC0000058,965c9e5347c12200e0ef563dbb9a7156,Taking a really long time to send emails. Last email took almost a minute for sending to complete and there wasn't even an attachment.,Performance problems with email,5,not requested,1
+INC0000002,9d385017c611228701d22104cc95c371,User can't get to any of his files on the file server.,Network file shares access issue,1,,3
+INC0001990,a2496c05731110107418660c4cf6a711,Unable to access the personal details section in payroll portal,Unable to access the personal details section in payroll portal,5,not requested,3
+INC0009001,a623cdb073a023002728660c4cf6a768,I am not able to edit a wiki page.,Unable to post content on a Wiki page,3,not requested,1
+INC0010111,a83820b58f723300e7e16c7827bdeed2,,ATF : Test1,5,not requested,6
+INC0000047,a9a16740c61122760004fe9095b7ddca,Can't connect to email from my laptop.,Issue with email,3,not requested,2
+INC0000046,a9e30c7dc61122760116894de7bcc7bd,Unable to login to SFA even though login credentials are correct.,Can't access SFA software,3,not requested,1
+INC0000048,a9e428cac61122760075710592216c58,Pages are taking more time to load than normal.,Having problems with Sales Tools performance,4,not requested,3
+INC0000051,d7158da0c0a8016700eef46c8d1f3661,Was able to access SAP Controlling application last week but doesn't seem to be working as of today. Is there an outage?,Manager can't access SAP Controlling application,1,not requested,2
+INC0000052,d7195138c0a8016700fd68449cfcd484,Main menu doesn't load when I open the SAP Financial Accounting application.,SAP Financial Accounting application appears to be down,1,not requested,2
+INC0000053,d71b3b41c0a8016700a8ef040791e72a,"I've been trying to access the SAP HR application for the last few hours. Each time I go into the application, nothing loads.",The SAP HR application is not accessible,1,not requested,2
+INC0000054,d71da88ac0a801670061eabfe4b28f77,Nothing loads in the application. Is there an outage?,SAP Materials Management is slow or there is an outage,1,not requested,3
+INC0000055,d71f7935c0a8016700802b64c67c11c6,Unable to get into the SAP Sales app. It was working yesterday.,SAP Sales app is not accessible,1,not requested,2
+INC0000003,e8caedcbc0a80164017df472f39eaed1,I just moved from floor 2 to floor 3 and my laptop cannot connect to any wireless network.,Wireless access is down in my area,1,,2
+INC0009005,ed92e8d173d023002728660c4cf6a7bc,Unable to send or receive emails.,Email server is down.,1,not requested,1
+INC0000049,ef4225a40a0a0b5700d0b8a790747812,"Receiving error message with ""network path not found.""",Network storage unavailable,2,not requested,2
+INC0000050,ef43c6d40a0a0b5700c77f9bf387afe3,Can't connect to Exchange. Login credentials and network connection are working though.,Can't access Exchange server - is it down?,1,not requested,2
+INC0007001,f12ca184735123002728660c4cf6a7ef,Employee payroll application server is down.Not able to login with valid credentials.,Employee payroll application server is down.,1,not requested,1
+INC0007002,ff4c21c4735123002728660c4cf6a758,Need access to the common drive for sharing files which can be accessed by all members. Please provide access.,Need access to the common drive.,4,not requested,1
