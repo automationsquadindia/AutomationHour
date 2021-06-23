@@ -1,0 +1,157 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="TestData" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="971,2599" sap2010:WorkflowViewState.IdRef="TestData_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="30">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Database</x:String>
+      <x:String>UiPath.Database.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Data.SqlClient</x:String>
+      <x:String>System.Data.Common</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="36">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Database</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="TestData" sap:VirtualizedContainerService.HintSize="476,2434" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:DatabaseConnection" Name="conn" />
+      <Variable x:TypeArguments="sd:DataTable" Name="DTSelect" />
+      <Variable x:TypeArguments="x:String" Name="str_DTSelect" />
+      <Variable x:TypeArguments="sd:DataTable" Name="DTEngg" />
+      <Variable x:TypeArguments="x:String" Name="str_Engg" />
+      <Variable x:TypeArguments="x:Int32" Name="AffRecords" />
+      <Variable x:TypeArguments="x:Int32" Name="Cnt" />
+      <Variable x:TypeArguments="sd:DataTable" Name="DTEmpIns" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:DatabaseConnect DatabaseConnection="[conn]" DisplayName="Connect" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.SqlClient" ConnectionString="Data Source=LAPTOP-00MU5FI2\SQLEXPRESS;Initial Catalog=RPA;Integrated Security=True" />
+    <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[DTSelect]" DisplayName="Execute Query" ExistingDbConnection="[conn]" sap:VirtualizedContainerService.HintSize="434,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="SELECT [EmpID]&#xA;      ,[EmpName]&#xA;      ,[EmpEmail]&#xA;      ,[EmpDeptt]&#xA;  FROM [dbo].[Employee] WHERE [EmpDeptt]=@Deptt">
+      <ui:ExecuteQuery.Parameters>
+        <InArgument x:TypeArguments="x:String" x:Key="Deptt">Engineering</InArgument>
+      </ui:ExecuteQuery.Parameters>
+    </ui:ExecuteQuery>
+    <ui:OutputDataTable DataTable="[DTSelect]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[str_DTSelect]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[str_DTSelect]" />
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="$$$$$$$$" />
+    <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[DTEngg]" DisplayName="Execute Query" ExistingDbConnection="[conn]" sap:VirtualizedContainerService.HintSize="434,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2" Sql="EXEC Sp_EmpSelect @Deptt='Engineering'">
+      <ui:ExecuteQuery.Parameters>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:ExecuteQuery.Parameters>
+    </ui:ExecuteQuery>
+    <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="StoredProcedure" DataTable="[DTEngg]" DisplayName="Execute Query - Stored Procedure" ExistingDbConnection="[conn]" sap:VirtualizedContainerService.HintSize="434,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_3" Sql="EmpSelect">
+      <ui:ExecuteQuery.Parameters>
+        <InArgument x:TypeArguments="x:String" x:Key="@Deptt">Engineering</InArgument>
+      </ui:ExecuteQuery.Parameters>
+    </ui:ExecuteQuery>
+    <ui:OutputDataTable DataTable="[DTEngg]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_2" Text="[str_Engg]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[str_Engg]" />
+    <ui:BuildDataTable DataTable="[DTEmpIns]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;EmpID&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EmpName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EmpEmail&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EmpDeptt&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{100,&quot;Ken Thomas&quot;, &quot;ken_thomas@efg.com&quot;, &quot;Finance&quot;}]" DataTable="[DTEmpIns]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{200,&quot;Bob Sane&quot;, &quot;bob_sane@efg.com&quot;, &quot;HR&quot;}]" DataTable="[DTEmpIns]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+    <ui:InsertDataTable ContinueOnError="{x:Null}" AffectedRecords="[AffRecords]" DataTable="[DTEmpIns]" DisplayName="Insert" ExistingDbConnection="[conn]" sap:VirtualizedContainerService.HintSize="434,115" sap2010:WorkflowViewState.IdRef="InsertDataTable_1" TableName="Employee" />
+    <ui:ExecuteNonQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" AffectedRecords="[AffRecords]" CommandType="Text" DisplayName="Execute Non Query" ExistingDbConnection="[conn]" sap:VirtualizedContainerService.HintSize="434,88" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_1" Sql="INSERT INTO [dbo].[Employee]&#xA;           ([EmpID]&#xA;           ,[EmpName]&#xA;           ,[EmpEmail]&#xA;           ,[EmpDeptt])&#xA;     VALUES&#xA;           (@EmpID&#xA;           ,@EmpName&#xA;           ,@EmpEmail&#xA;           ,@EmpDeptt)">
+      <ui:ExecuteNonQuery.Parameters>
+        <InArgument x:TypeArguments="x:Int32" x:Key="@EmpID">2</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="@EmpName">Andrew NG</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="@EmpEmail">andrew_ng@abc.com</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="@EmpDeptt">Engineering</InArgument>
+      </ui:ExecuteNonQuery.Parameters>
+    </ui:ExecuteNonQuery>
+    <ui:ExecuteNonQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" AffectedRecords="[AffRecords]" CommandType="Text" DisplayName="Execute Non Query" ExistingDbConnection="[conn]" sap:VirtualizedContainerService.HintSize="434,88" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_2" Sql="EXEC EmpInsert @EmpID=5, @EmpName='Bill Brown', @EmpEmail='bill_br@xyz.com', @EmpDeptt='Manufacturing'">
+      <ui:ExecuteNonQuery.Parameters>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:ExecuteNonQuery.Parameters>
+    </ui:ExecuteNonQuery>
+    <ui:ExecuteNonQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" AffectedRecords="[AffRecords]" CommandType="StoredProcedure" DisplayName="Execute Non Query" ExistingDbConnection="[conn]" sap:VirtualizedContainerService.HintSize="434,88" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_3" Sql="EmpInsert">
+      <ui:ExecuteNonQuery.Parameters>
+        <InArgument x:TypeArguments="x:Int32" x:Key="@EmpID">10</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="@EmpName">Ram Gupta</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="@EmpEmail">ram_gupta@mno.com</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="@EmpDeptt">Finance</InArgument>
+      </ui:ExecuteNonQuery.Parameters>
+    </ui:ExecuteNonQuery>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[AffRecords]" />
+    <ui:DatabaseTransaction ContinueOnError="{x:Null}" DatabaseConnection="{x:Null}" DisplayName="Start Transaction" ExistingDbConnection="[conn]" sap:VirtualizedContainerService.HintSize="434,417" sap2010:WorkflowViewState.IdRef="DatabaseTransaction_1" UseTransaction="True">
+      <ui:DatabaseTransaction.Body>
+        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,308" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ExecuteNonQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" AffectedRecords="[AffRecords]" CommandType="Text" DisplayName="Execute Non Query - Pass" ExistingDbConnection="[conn]" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_4" Sql="INSERT INTO [dbo].[Employee]&#xA;           ([EmpID]&#xA;           ,[EmpName]&#xA;           ,[EmpEmail]&#xA;           ,[EmpDeptt])&#xA;     VALUES&#xA;           (@EmpID&#xA;           ,@EmpName&#xA;           ,@EmpEmail&#xA;           ,@EmpDeptt)">
+            <ui:ExecuteNonQuery.Parameters>
+              <InArgument x:TypeArguments="x:Int32" x:Key="@EmpID">11</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="@EmpName">Sohan N</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="@EmpEmail">sohan_n@abc.com</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="@EmpDeptt">HR</InArgument>
+            </ui:ExecuteNonQuery.Parameters>
+          </ui:ExecuteNonQuery>
+          <ui:ExecuteNonQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" AffectedRecords="[AffRecords]" CommandType="Text" DisplayName="Execute Non Query - Fail" ExistingDbConnection="[conn]" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_5" Sql="INSERT INTO [dbo].[Employee]&#xA;           ([EmpID]&#xA;           ,[EmpName]&#xA;           ,[EmpEmail]&#xA;           ,[EmpDeptt])&#xA;     VALUES&#xA;           (@EmpID&#xA;           ,@EmpName&#xA;           ,@EmpEmail&#xA;           ,@EmpDeptt)">
+            <ui:ExecuteNonQuery.Parameters>
+              <InArgument x:TypeArguments="x:String" x:Key="@EmpID">Hello</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="@EmpName">Vimal Nair</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="@EmpEmail">vimal_nair@pqr.com</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="@EmpDeptt">HR</InArgument>
+            </ui:ExecuteNonQuery.Parameters>
+          </ui:ExecuteNonQuery>
+        </Sequence>
+      </ui:DatabaseTransaction.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:DatabaseTransaction>
+    <ui:DatabaseDisconnect DatabaseConnection="[conn]" DisplayName="Disconnect" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1" />
+  </Sequence>
+</Activity>
